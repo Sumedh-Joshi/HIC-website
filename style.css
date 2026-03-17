@@ -1,0 +1,340 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #dddddd;
+    color: #000;
+}
+
+/* Makes footer stay at bottom */
+main {
+    flex: 1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    background: #000;
+    padding: 20px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.navbar li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00adb5;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 60px 20px;
+}
+
+header img {
+    width: 180px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+header h1 {
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #dddddd;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* For pages like experience/projects */
+.page-section {
+    padding: 70px 20px;
+    background: #dddddd;
+    text-align: center;
+}
+
+/* =========================
+   CARD / BOX LAYOUT
+========================= */
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease;
+    text-align: left;
+}
+
+.box:hover {
+    transform: translateY(-6px);
+}
+
+.box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.box-content {
+    padding: 18px;
+}
+
+.box-content h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.box-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* =========================
+   LANGUAGES SECTION
+========================= */
+.languages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.languages img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+    display: inline-block;
+    background: #00adb5;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #007b80;
+}
+
+.guest-services-box {
+    grid-column: 1 / -1;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+/* =========================
+   RESUME PAGE
+========================= */
+.resume-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #dddddd;
+}
+
+.resume-buttons {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.resume-viewer {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.resume-viewer iframe,
+.resume-viewer object {
+    width: 100%;
+    height: 900px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-info a {
+    color: #0000cc;
+    text-decoration: underline;
+}
+
+.contact-info a:hover {
+    color: #00adb5;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .navbar ul {
+        gap: 20px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    header img {
+        width: 140px;
+        height: 200px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .box-content h3 {
+        font-size: 20px;
+    }
+
+    .resume-viewer iframe,
+    .resume-viewer object {
+        height: 700px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar ul {
+        gap: 14px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 60px 15px;
+    }
+
+    .resume-buttons {
+        gap: 12px;
+    }
+
+    .languages img {
+        width: 65px;
+        height: 65px;
+    }
+}
